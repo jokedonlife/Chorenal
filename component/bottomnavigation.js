@@ -10,8 +10,8 @@ const HabitRoute = () => <Text></Text>;
 const MyComponentBN = () => {
     const [index, setIndex] = useState(0);
     const [routes] = useState([
-      {key: 'journal', title: 'Journal', icon: 'pen'},
-      {key: 'goals', title: 'Goals', icon: 'target'},
+      {key: 'journal', title: 'Journal', icon: 'pen', activeColor: 'dodgerblue'},
+      {key: 'goals', title: 'Goals', icon: 'target', color: 'grey'},
       {key: 'habit', title: 'Habits', icon: 'flag'},
     ]);
 
@@ -26,7 +26,12 @@ const MyComponentBN = () => {
             navigationState = {{index, routes}}
             onIndexChange = {setIndex}
             renderScene = {renderScene}
-            style={{borderRadius: 21,}}
+            barStyle = {{backgroundColor: 'dodgerblue'}}
+            style={{
+              //flex: 1,
+              //borderRadius: 21,
+              
+            }}
             
         />
     );
